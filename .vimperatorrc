@@ -1,0 +1,107 @@
+abbreviate qin qinxij@163.com
+abbreviate sina qinxij@sina.com
+abbreviate av   cocoav@sina.com
+abbreviate bd   http://www.baidu.com/
+abbreviate gg   http://www.google.com.hk/
+abbreviate git  https://github.com/
+abbreviate xk   http://xsxk.guetonline.com/student/public/login.asp
+
+
+" set focus to content when starting up
+set fc
+" set hintchars
+set hc=abcdefghijklmnopqrstuvwxyz
+
+" set hintinputs
+set hin=
+
+" set tabnumbers
+set tn
+
+" Set gui
+set gui=noaddons,nobookmarks,nomenu,nonavigation,tabs
+
+:set nextpattern=\s*下一页|下一张|下页\s*,\bnext\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\bmore\b
+:set previouspattern=\s*上一页|上一张|上页\s*,\bprev|previous\b,^<$,^(<<|«)$,^(<|«),(<|«)$
+
+silent qmark b http://www.baidu.com/
+
+silent qmark c http://www.cnblogs.com/
+
+silent qmark g http://www.google.com.hk/
+silent qmark G https://github.com/
+
+silent qmark i http://www.iteye.com/
+silent qmark I http://www.qiyi.com/
+
+silent qmark p http://www.ppurl.com/
+
+silent qmark t http://www.taobao.com/
+
+silent qmark w http://weibo.com/
+
+silent qmark d chrome://mozapps/content/downloads/downloads.xul
+silent qmark a about:addons
+
+noremap S sanitize!<CR>
+noremap gma :panorama add 
+noremap gmA :panorama add! 
+noremap gmg :panorama switch 
+noremap gmd :panorama rm 
+noremap gmD :panorama rm<CR>
+noremap gms :panorama stash 
+noremap gmS :panorama stash! 
+noremap gml :panorama list<CR> 
+
+
+nnoremap gsa :tabnew addons 
+nnoremap gsA :open addons 
+nnoremap gsb :tabnew baidu 
+nnoremap gsB :open baidu 
+nnoremap gsy :tabnew youdao 
+nnoremap gsY :open youdao 
+nnoremap gsg :tabnew google 
+nnoremap gsG :open google 
+nnoremap gsh :tabnew github 
+nnoremap gsH :open github 
+nnoremap gsp :tabnew pdf 
+nnoremap gsP :open pdf  
+nnoremap gse :tabnew ebook 
+nnoremap gsE :open ebook 
+
+nnoremap ,sp :tabnew http://docs.python.org/3.3/search.html?q=
+nnoremap ,sP :open http://docs.python.org/3.3/search.html?q=
+
+
+noremap ,ev :emenu Tools.Add to Evernote<CR>
+map <C-j> <C-d>
+map <C-k> <C-u>
+map H 0
+map L $
+noremap j 5j
+noremap k 5k
+inoremap jj <Esc>
+cnoremap jj <Esc>
+noremap ; :
+noremap : ;<SPACE><C-U>
+noremap <C-h> :tabmove -1<CR>
+noremap <C-l> :tabmove +1<CR>
+map > g$
+map < g0
+noremap ] ]]
+noremap [ [[
+
+noremap ,t :tab<SPACE>
+
+
+colorscheme molokai
+
+set defsearch=baidu
+
+"""" Change Chinese toolbar to English.
+"" install english pack form here.
+"" http://ftp.mozilla.org/pub/mozilla.org
+"" open about:config
+"" Set general.useragent.locate to en-US
+
+" vim: set ft=vim
