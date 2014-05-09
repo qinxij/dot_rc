@@ -53,6 +53,8 @@ noremap gms :panorama stash
 noremap gmS :panorama stash! 
 noremap gml :panorama list<CR> 
 
+" We can use <C-S-N> and <C-S-P> to switch page groups. I don't know why...
+
 
 nnoremap gsa :tabnew addons 
 nnoremap gsA :open addons 
@@ -86,6 +88,13 @@ noremap ; :
 noremap : ;<SPACE><C-U>
 noremap <C-h> :tabmove -1<CR>
 noremap <C-l> :tabmove +1<CR>
+noremap gh :tabmove -100<CR>
+noremap gl :tabmove +100<CR>
+noremap gb :buffer! #<CR>
+noremap ,n :set gui+=navigation<CR>
+noremap ,N :set gui+=nonavigation<CR>
+noremap ,m :set gui+=menu<CR>
+noremap ,M :set gui+=nomenu<CR>
 map > g$
 map < g0
 noremap ] ]]

@@ -47,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git)
 # Replace with:
-plugins=(git autojump)
+plugins=(git autojump pip nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,5 +119,15 @@ source $HOME/.zsh-fuzzy-match/fuzzy-match.zsh
 # NVM
 if [ -s ~/.nvm/nvm.sh ]; then
 	NVM_DIR=~/.nvm
+  NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
 	source ~/.nvm/nvm.sh
 fi
+
+#alias for cnpm
+alias cnpm="npm --registry=http://r.cnpmjs.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=http://dist.cnpmjs.org \
+  --userconfig=$HOME/.cnpmrc"
+
+# alias for koa to generator
+alias node='node --harmony'
