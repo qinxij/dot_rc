@@ -54,8 +54,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
-export PATH="/opt/local/bin:$PATH"
+export PATH="/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -99,7 +99,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Tab completion in the Python Shell
 export PYTHONSTARTUP="$(python -m jedi repl)"
-source $HOME/.zsh-fuzzy-match/fuzzy-match.zsh
+
 
 #alias for cnpm
 alias cnpm="npm --registry=http://r.cnpmjs.org \
