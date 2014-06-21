@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Dot rc by qinxij</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Dot rc</h1>
+        <h2>my dot_rc files.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/qinxij/dot_rc/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/qinxij/dot_rc/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/qinxij/dot_rc" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="configuration-of-os-xubuntu" class="anchor" href="#configuration-of-os-xubuntu"><span class="octicon octicon-link"></span></a>Configuration of OS X/Ubuntu</h1>
+
+<h2>
+<a name="include" class="anchor" href="#include"><span class="octicon octicon-link"></span></a>Include</h2>
+
+<p>This is a repository contains some configuration files for OS X/Ubuntu.</p>
+
+<p>Include:</p>
+
+<ul>
+<li>.pip/pip.config</li>
+<li>.gitconfig</li>
+<li>.tmux.conf</li>
+<li>.vimperatorrc</li>
+<li>.zshrc</li>
+<li>kde_global_keyboard_shortcuts.kksrc</li>
+</ul><h2>
+<a name="homebrew" class="anchor" href="#homebrew"><span class="octicon octicon-link"></span></a><em>homebrew</em>
+</h2>
+
+<ul>
+<li>
+<p>Install <code>homebrew</code></p>
+
+<div class="highlight highlight-bash"><pre>ruby -e <span class="s2">"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</span>
+</pre></div>
+</li>
+</ul><h2>
+<a name="ruby" class="anchor" href="#ruby"><span class="octicon octicon-link"></span></a>Ruby</h2>
+
+<ul>
+<li>
+<p>Install <code>rvm</code></p>
+
+<div class="highlight highlight-bash"><pre>curl -L https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer <span class="p">|</span> bash -s stable --autolibs<span class="o">=</span>enabled
+</pre></div>
+</li>
+<li>
+<p>Replace <code>gem sources</code></p>
+
+<div class="highlight highlight-bash"><pre><span class="c"># replace the gem sources</span>
+gem sources --remove https://rubygems.org/
+
+gem sources -a http://ruby.taobao.org/
+
+<span class="c"># gem sources -l       #用来查看source list</span>
+</pre></div>
+</li>
+<li>
+<p>Install <code>ruby</code></p>
+
+<div class="highlight highlight-bash"><pre>rvm install 2.0
+</pre></div>
+</li>
+<li>
+<p>Install <code>rails</code></p>
+
+<div class="highlight highlight-bash"><pre>gem install rails
+</pre></div>
+</li>
+</ul><h2>
+<a name="oh-my-zsh" class="anchor" href="#oh-my-zsh"><span class="octicon octicon-link"></span></a>oh-my-zsh</h2>
+
+<ul>
+<li>
+<p>Install <code>oh-my-zsh</code> -  see <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></p>
+
+<div class="highlight highlight-bash"><pre>curl -L http://install.ohmyz.sh <span class="p">|</span> sh
+</pre></div>
+</li>
+</ul><h2>
+<a name="python" class="anchor" href="#python"><span class="octicon octicon-link"></span></a>Python</h2>
+
+<ul>
+<li>
+<p>pip sources
+see <a href="http://topmanopensource.iteye.com/blog/2004853">使用国内镜像源来加速python pypi包的安装</a>
+or see evernote (使用国内镜像源来加速python pypi包的安装)
+In file <code>~/.pip/pip.conf</code>:</p>
+
+<div class="highlight highlight-bash"><pre><span class="o">[</span>global<span class="o">]</span>
+
+index-url <span class="o">=</span> http://pypi.douban.com/simple
+</pre></div>
+</li>
+<li>
+<p>Install <code>virtualenvwrapper</code></p>
+
+<div class="highlight highlight-bash"><pre>pip install virtualenvwrapper
+</pre></div>
+</li>
+<li>
+<p>Install <code>IPython</code> and <code>IPython nodebook</code>
+see <a href="http://ipython.org/install.html">Here</a></p>
+
+<div class="highlight highlight-bash"><pre>pip install pyzmq jinja2 tornado ipython
+</pre></div>
+</li>
+</ul><h2>
+<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>NodeJS</h2>
+
+<ul>
+<li>
+<p>Install <code>nvm</code></p>
+
+<p>see <a href="https://github.com/creationix/nvm">github/nvm</a></p>
+
+<div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh <span class="p">|</span> sh
+</pre></div>
+</li>
+<li>
+<p>Install <code>node</code></p>
+
+<div class="highlight highlight-bash"><pre>nvm install 0.11.13
+nvm <span class="nb">alias </span>default 0.11.13
+nvm use 0.11.13
+</pre></div>
+</li>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ul>
+<li>
+<p>Just Run:</p>
+
+<div class="highlight highlight-bash"><pre>./generate_links.sh
+</pre></div>
+</li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
