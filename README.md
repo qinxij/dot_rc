@@ -54,6 +54,7 @@
 ## oh-my-zsh
 
   * Install `oh-my-zsh` -  see [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+  
     ```bash
     curl -L http://install.ohmyz.sh | sh
     ```
