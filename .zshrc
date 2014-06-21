@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -11,56 +11,57 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Set to this to use case-sensitive completion
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment this to disable bi-weekly auto-update checks
+# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want to disable command autocorrection
+# Uncomment the following line to disable command auto-correction.
 # DISABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
+# Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(git)
-# Replace with:
 plugins=(git autojump pip nvm)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-
-# JDK
-export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_51"
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+export PATH="/opt/local/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -73,6 +74,12 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# nvm
+export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
+source ~/workspace/repositories/nvm/nvm.sh
+
+# fzf
+source ~/.fzf.zsh
 
 # Added for autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
@@ -84,44 +91,15 @@ export EDITOR=vim
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 
-# Added for android sdk & ndk.
-export ANDROIDSDK="/home/qij/workspace/stuff/android-sdk-linux"
-export ANDROIDNDK="/home/qij/workspace/stuff/android-ndk-r9c"
-export ANDROIDNDKVER=r9c
-export ANDROIDAPI=19
-export PATH=$ANDROIDNDK:$ANDROIDSDK/platform-tools:$ANDROIDSDK/tools:$PATH
-
 # Added for virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 
-# Hide warning by gvim:
-# (gvim:3739): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::sm-connect after class was initialised
-#
-# (gvim:3739): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
-#
-# (gvim:3739): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::display after class was initialised
-#
-# (gvim:3739): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::default-icon after class was initialised
-alias gvim='gvim 2>/dev/null'
-
-# need sudo apt-get install xclip
-alias clip='xclip -i -sel clipboard'
-alias clipo='xclip -o -sel clipboard'
-
 # Tab completion in the Python Shell
 export PYTHONSTARTUP="$(python -m jedi repl)"
 source $HOME/.zsh-fuzzy-match/fuzzy-match.zsh
-
-
-# NVM
-if [ -s ~/.nvm/nvm.sh ]; then
-	NVM_DIR=~/.nvm
-  NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
-	source ~/.nvm/nvm.sh
-fi
 
 #alias for cnpm
 alias cnpm="npm --registry=http://r.cnpmjs.org \
