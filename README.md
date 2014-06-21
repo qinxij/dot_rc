@@ -54,7 +54,7 @@
 ## oh-my-zsh
 
   * Install `oh-my-zsh` -  see [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-  
+
     ```bash
     curl -L http://install.ohmyz.sh | sh
     ```
@@ -67,9 +67,9 @@
     In file `~/.pip/pip.conf`:
 
     ```bash
-      [global]
+    [global]
 
-      index-url = http://pypi.douban.com/simple
+    index-url = http://pypi.douban.com/simple
     ```
 
   * Install `virtualenvwrapper`
