@@ -109,3 +109,7 @@ alias cnpm="npm --registry=http://r.cnpmjs.org \
 
 # alias for koa to generator
 alias node='node --harmony'
+
+# let iTerm 2 display chinese charactors currectly.
+# see: http://hi.baidu.com/hawkspace/item/e07c6528335a34c7dcf69a40
+export LANG=en_US.UTF-8
