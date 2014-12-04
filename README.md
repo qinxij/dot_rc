@@ -1,53 +1,64 @@
 # Configuration of OS X/Ubuntu
-
-## Include
-  This is a repository contains some configuration files for OS X/Ubuntu.
-
-  Include:
-  * .pip/pip.config
-  * .gitconfig
-  * .tmux.conf
-  * .vimperatorrc
-  * .zshrc
-  * kde_global_keyboard_shortcuts.kksrc
+---
 
 
-## *homebrew*
-  * Install `homebrew`
+## What's in
+This is a repository contains some configuration files for OS X/Ubuntu.
 
-    ```bash
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-    ```
+Include:
+  
+ * .pip/pip.config
+ * .gitconfig
+ * .tmux.conf
+ * .vimperatorrc
+ * .zshrc
+ * kde_global_keyboard_shortcuts.kksrc
+ 
+ etc.
+
+
+## homebrew
+  * Install `homebrew`, see [homebrew](http://brew.sh/).
+
+	```
+	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+		
+	```
 
 ## Ruby
 
-  * Install `rvm`
+  * Install `rvm`, see [rvm website](http://www.rvm.io/).
 
-    ```bash
-    curl -L https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable --autolibs=enabled
-    ```
+	```
+	curl -L https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable --autolibs=enabled   
+	```
+	or
+	
+	```
+	curl -sSL https://get.rvm.io | bash -s stable
+	```
 
   * Replace `gem sources`
 
-    ```bash
-    # replace the gem sources
-    gem sources --remove https://rubygems.org/
-
-    gem sources -a http://ruby.taobao.org/
-
-    # gem sources -l       #用来查看source list
-    ```
+	```
+	# replace the gem sources
+	gem sources -r https://rubygems.org/
+	
+	gem sources -a http://ruby.taobao.org/
+	
+	# gem sources -l 用来查看source list
+	```
 
   * Install `ruby`
 
-    ```bash
+    ```
     rvm install 2.0
     ```
 
   * Install `rails`
 
-    ```bash
-    [sudo] install rails
+    ```
+    [sudo] gem install rails
     ```
 
 
@@ -55,48 +66,56 @@
 
   * Install `oh-my-zsh` -  see [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-    ```bash
+    ```
     curl -L http://install.ohmyz.sh | sh
     ```
 
 ## Python
 
-  * pip sources
-    see [使用国内镜像源来加速python pypi包的安装](http://topmanopensource.iteye.com/blog/2004853)
-    or see evernote (使用国内镜像源来加速python pypi包的安装)
-    In file `~/.pip/pip.conf`:
+* Install pip. See [pip](https://pypi.python.org/pypi/pip/) and [pip installing](https://pip.pypa.io/en/latest/installing.html).
 
-    ```bash
-    [global]
+	```
+	curl https://bootstrap.pypa.io/get-pip.py | python
+	```
 
-    index-url = http://pypi.douban.com/simple
-    ```
+* pip sources.
 
-  * Install `virtualenvwrapper`
+	- See [使用国内镜像源来加速python pypi包的安装](http://topmanopensource.iteye.com/blog/2004853)
 
-    ```bash
-    pip install virtualenvwrapper
-    ```
+	- See evernote (使用国内镜像源来加速python pypi包的安装).
+	
+   In file `~/.pip/pip.conf`:
 
-  * Install `IPython` and `IPython nodebook`
-    see [Here](http://ipython.org/install.html)
+   ```
+   [global]
 
-    ```bash
-    pip install pyzmq jinja2 tornado ipython
-    ```
+   index-url = http://pypi.douban.com/simple
+   ```
+
+* Install `virtualenvwrapper`. See [virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper/overview) on Bitbucket.
+
+   ```
+   pip install virtualenvwrapper
+   ```
+
+ * Install `IPython` and `IPython nodebook`
+   see [Here](http://ipython.org/install.html)
+
+   ```
+   pip install pyzmq jinja2 tornado ipython
+   ```
 
 ## NodeJS
 
-  * Install `nvm`
-
-    see [github/nvm](https://github.com/creationix/nvm)
-    ```bash
+  * Install `nvm`, see [github/nvm](https://github.com/creationix/nvm).
+  
+    ```
     curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh | sh
     ```
 
-  * Install `node`
+  * Install `node`, see [node](http://www.nodejs.org/)
 
-    ```bash
+    ```
     nvm install 0.11.13
     nvm alias default 0.11.13
     nvm use 0.11.13
@@ -106,6 +125,6 @@
 
   * Just Run:
 
-    ```bash
+    ```
     ./generate_links.sh
     ```
