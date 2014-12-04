@@ -114,3 +114,7 @@ alias vim=gvim
 # let iTerm 2 display chinese charactors currectly.
 # see: http://hi.baidu.com/hawkspace/item/e07c6528335a34c7dcf69a40
 export LANG=en_US.UTF-8
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/qij/Downloads/cocos2d-x-3.3rc0/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
