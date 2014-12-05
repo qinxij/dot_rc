@@ -3,36 +3,41 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <title>Dot rc by qinxij</title>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Dot RC by qinxij</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <header>
-      <div class="container">
-        <h1>Dot rc</h1>
-        <h2>my dot_rc files.</h2>
+        <header>
+          <h1>Dot RC</h1>
+          <h2>Qinxij&#39;s dot rc for OS X or Ubuntu.</h2>
+        </header>
 
-        <section id="downloads">
-          <a href="https://github.com/qinxij/dot_rc/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/qinxij/dot_rc/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/qinxij/dot_rc" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/qinxij/dot_rc/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/qinxij/dot_rc/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/qinxij/dot_rc" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
-      </div>
-    </header>
 
-    <div class="container">
-      <section id="main_content">
-        <h1>
-<a name="configuration-of-os-xubuntu" class="anchor" href="#configuration-of-os-xubuntu"><span class="octicon octicon-link"></span></a>Configuration of OS X/Ubuntu</h1>
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="configuration-of-os-xubuntu" class="anchor" href="#configuration-of-os-xubuntu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration of OS X/Ubuntu</h1>
+
+<hr>
 
 <h2>
-<a name="include" class="anchor" href="#include"><span class="octicon octicon-link"></span></a>Include</h2>
+<a id="whats-in" class="anchor" href="#whats-in" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's in</h2>
 
 <p>This is a repository contains some configuration files for OS X/Ubuntu.</p>
 
@@ -44,123 +49,178 @@
 <li>.tmux.conf</li>
 <li>.vimperatorrc</li>
 <li>.zshrc</li>
-<li>kde_global_keyboard_shortcuts.kksrc</li>
-</ul><h2>
-<a name="homebrew" class="anchor" href="#homebrew"><span class="octicon octicon-link"></span></a><em>homebrew</em>
-</h2>
-
-<ul>
 <li>
-<p>Install <code>homebrew</code></p>
+<p>kde_global_keyboard_shortcuts.kksrc</p>
 
-<div class="highlight highlight-bash"><pre>ruby -e <span class="s2">"$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</span>
-</pre></div>
+<p>etc.</p>
 </li>
-</ul><h2>
-<a name="ruby" class="anchor" href="#ruby"><span class="octicon octicon-link"></span></a>Ruby</h2>
+</ul>
+
+<h2>
+<a id="homebrew" class="anchor" href="#homebrew" aria-hidden="true"><span class="octicon octicon-link"></span></a>homebrew</h2>
 
 <ul>
 <li>
-<p>Install <code>rvm</code></p>
+<p>Install <code>homebrew</code>, see <a href="http://brew.sh/">homebrew</a>.</p>
 
-<div class="highlight highlight-bash"><pre>curl -L https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer <span class="p">|</span> bash -s stable --autolibs<span class="o">=</span>enabled
-</pre></div>
+<pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)" 
+</code></pre>
+</li>
+</ul>
+
+<h2>
+<a id="ruby" class="anchor" href="#ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ruby</h2>
+
+<ul>
+<li>
+<p>Install <code>rvm</code>, see <a href="http://www.rvm.io/">rvm website</a>.</p>
+
+<pre><code>curl -L https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable --autolibs=enabled   
+</code></pre>
+
+<p>or</p>
+
+<pre><code>curl -sSL https://get.rvm.io | bash -s stable
+</code></pre>
 </li>
 <li>
 <p>Replace <code>gem sources</code></p>
 
-<div class="highlight highlight-bash"><pre><span class="c"># replace the gem sources</span>
-gem sources --remove https://rubygems.org/
+<pre><code># replace the gem sources
+gem sources -r https://rubygems.org/
 
 gem sources -a http://ruby.taobao.org/
 
-<span class="c"># gem sources -l       #用来查看source list</span>
-</pre></div>
+# gem sources -l 用来查看source list
+</code></pre>
 </li>
 <li>
 <p>Install <code>ruby</code></p>
 
-<div class="highlight highlight-bash"><pre>rvm install 2.0
-</pre></div>
+<pre><code>rvm install 2.0
+</code></pre>
 </li>
 <li>
 <p>Install <code>rails</code></p>
 
-<div class="highlight highlight-bash"><pre>gem install rails
-</pre></div>
+<pre><code>[sudo] gem install rails
+</code></pre>
 </li>
-</ul><h2>
-<a name="oh-my-zsh" class="anchor" href="#oh-my-zsh"><span class="octicon octicon-link"></span></a>oh-my-zsh</h2>
+</ul>
+
+<h2>
+<a id="oh-my-zsh" class="anchor" href="#oh-my-zsh" aria-hidden="true"><span class="octicon octicon-link"></span></a>oh-my-zsh</h2>
 
 <ul>
 <li>
 <p>Install <code>oh-my-zsh</code> -  see <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></p>
 
-<div class="highlight highlight-bash"><pre>curl -L http://install.ohmyz.sh <span class="p">|</span> sh
-</pre></div>
+<pre><code>curl -L http://install.ohmyz.sh | sh
+</code></pre>
 </li>
-</ul><h2>
-<a name="python" class="anchor" href="#python"><span class="octicon octicon-link"></span></a>Python</h2>
+<li>
+<p>Install <code>fzf</code> - see <a href="https://github.com/junegunn/fzf">fzf</a>.</p>
+
+<pre><code>git clone https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+</code></pre>
+</li>
+<li>
+<p>Install <code>autojump</code> or <code>j</code> - see <a href="https://github.com/joelthelion/autojump">autojump</a></p>
+
+<p>OS X:</p>
+
+<pre><code>brew install autojump
+</code></pre>
+
+<p>Ubuntu:</p>
+
+<pre><code>sudo apt-get install autojump
+</code></pre>
+</li>
+</ul>
+
+<h2>
+<a id="python" class="anchor" href="#python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python</h2>
 
 <ul>
 <li>
-<p>pip sources
-see <a href="http://topmanopensource.iteye.com/blog/2004853">使用国内镜像源来加速python pypi包的安装</a>
-or see evernote (使用国内镜像源来加速python pypi包的安装)
-In file <code>~/.pip/pip.conf</code>:</p>
+<p>Install pip. See <a href="https://pypi.python.org/pypi/pip/">pip</a> and <a href="https://pip.pypa.io/en/latest/installing.html">pip installing</a>.</p>
 
-<div class="highlight highlight-bash"><pre><span class="o">[</span>global<span class="o">]</span>
-
-index-url <span class="o">=</span> http://pypi.douban.com/simple
-</pre></div>
+<pre><code>curl https://bootstrap.pypa.io/get-pip.py | python
+</code></pre>
 </li>
 <li>
-<p>Install <code>virtualenvwrapper</code></p>
+<p>pip sources.</p>
 
-<div class="highlight highlight-bash"><pre>pip install virtualenvwrapper
-</pre></div>
+<ul>
+<li><p>See <a href="http://topmanopensource.iteye.com/blog/2004853">使用国内镜像源来加速python pypi包的安装</a></p></li>
+<li><p>See evernote (使用国内镜像源来加速python pypi包的安装).</p></li>
+</ul>
+
+<p>In file <code>~/.pip/pip.conf</code>:</p>
+
+<pre><code>[global]
+
+index-url = http://pypi.douban.com/simple
+</code></pre>
+</li>
+<li>
+<p>Install <code>virtualenvwrapper</code>. See <a href="https://bitbucket.org/dhellmann/virtualenvwrapper/overview">virtualenvwrapper</a> on Bitbucket.</p>
+
+<pre><code>pip install virtualenvwrapper
+</code></pre>
 </li>
 <li>
 <p>Install <code>IPython</code> and <code>IPython nodebook</code>
 see <a href="http://ipython.org/install.html">Here</a></p>
 
-<div class="highlight highlight-bash"><pre>pip install pyzmq jinja2 tornado ipython
-</pre></div>
+<pre><code>pip install pyzmq jinja2 tornado ipython
+</code></pre>
 </li>
-</ul><h2>
-<a name="nodejs" class="anchor" href="#nodejs"><span class="octicon octicon-link"></span></a>NodeJS</h2>
+</ul>
+
+<h2>
+<a id="nodejs" class="anchor" href="#nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>NodeJS</h2>
 
 <ul>
 <li>
-<p>Install <code>nvm</code></p>
+<p>Install <code>nvm</code>, see <a href="https://github.com/creationix/nvm">github/nvm</a>.</p>
 
-<p>see <a href="https://github.com/creationix/nvm">github/nvm</a></p>
-
-<div class="highlight highlight-bash"><pre>curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh <span class="p">|</span> sh
-</pre></div>
+<pre><code>curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/
+install.sh | sh
+</code></pre>
 </li>
 <li>
-<p>Install <code>node</code></p>
+<p>Install <code>node</code>, see <a href="http://www.nodejs.org/">node</a></p>
 
-<div class="highlight highlight-bash"><pre>nvm install 0.11.13
-nvm <span class="nb">alias </span>default 0.11.13
+<pre><code>nvm install 0.11.13
+nvm alias default 0.11.13
 nvm use 0.11.13
-</pre></div>
+</code></pre>
 </li>
-</ul><h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <ul>
 <li>
 <p>Just Run:</p>
 
-<div class="highlight highlight-bash"><pre>./generate_links.sh
-</pre></div>
+<pre><code>./generate_links.sh
+</code></pre>
 </li>
 </ul>
-      </section>
-    </div>
+        </section>
 
-    
+        <footer>
+          Dot RC is maintained by <a href="https://github.com/qinxij">qinxij</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
   </body>
 </html>
