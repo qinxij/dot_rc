@@ -69,48 +69,70 @@ Include:
     ```
     curl -L http://install.ohmyz.sh | sh
     ```
+   
+  * Install `fzf` - see [fzf](https://github.com/junegunn/fzf).
+
+	```
+	git clone https://github.com/junegunn/fzf.git ~/.fzf
+	~/.fzf/install
+	```
+	
+  * Install `autojump` or `j` - see [autojump](https://github.com/joelthelion/autojump)
+  
+    OS X:
+    
+    ```
+    brew install autojump
+    ```
+    
+    Ubuntu:
+    
+    ```
+    sudo apt-get install autojump
+    ```
 
 ## Python
 
-* Install pip. See [pip](https://pypi.python.org/pypi/pip/) and [pip installing](https://pip.pypa.io/en/latest/installing.html).
+  * Install pip. See [pip](https://pypi.python.org/pypi/pip/) and [pip installing](https://pip.pypa.io/en/latest/installing.html).
 
 	```
 	curl https://bootstrap.pypa.io/get-pip.py | python
 	```
 
-* pip sources.
+  * pip sources.
 
 	- See [使用国内镜像源来加速python pypi包的安装](http://topmanopensource.iteye.com/blog/2004853)
 
 	- See evernote (使用国内镜像源来加速python pypi包的安装).
 	
-   In file `~/.pip/pip.conf`:
+    In file `~/.pip/pip.conf`:
 
-   ```
-   [global]
+    ```
+    [global]
 
-   index-url = http://pypi.douban.com/simple
-   ```
+    index-url = http://pypi.douban.com/simple
+    ```
 
-* Install `virtualenvwrapper`. See [virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper/overview) on Bitbucket.
+  * Install `virtualenvwrapper`. See [virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper/overview) on Bitbucket.
 
-   ```
-   pip install virtualenvwrapper
-   ```
+    ```
+    pip install virtualenvwrapper
+    ```
 
- * Install `IPython` and `IPython nodebook`
-   see [Here](http://ipython.org/install.html)
+  * Install `IPython` and `IPython nodebook`
+    see [Here](http://ipython.org/install.html)
 
-   ```
-   pip install pyzmq jinja2 tornado ipython
-   ```
+    ```
+    pip install pyzmq jinja2 tornado ipython
+    ```
 
 ## NodeJS
 
   * Install `nvm`, see [github/nvm](https://github.com/creationix/nvm).
   
     ```
-    curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh | sh
+    curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/
+    install.sh | sh
     ```
 
   * Install `node`, see [node](http://www.nodejs.org/)
