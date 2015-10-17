@@ -75,7 +75,7 @@ nnoremap ,sp :tabnew http://docs.python.org/3.3/search.html?q=
 nnoremap ,sP :open http://docs.python.org/3.3/search.html?q=
 
 
-noremap ,ev :emenu Tools.Add to Evernote<CR>
+noremap ,ev :emenu Tools.WebClipper<CR>
 map <C-j> <C-d>
 map <C-k> <C-u>
 map H 0
@@ -102,8 +102,10 @@ noremap [ [[
 
 noremap ,t :tab<SPACE>
 
+noremap <C-c> :stop<CR>
+noremap <C-s> :stopall<CR>
 
-colorscheme molokai
+colorscheme solarized_dark
 
 set defsearch=baidu
 
