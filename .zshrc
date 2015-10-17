@@ -48,9 +48,46 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git autojump pip nvm)
+plugins=(git autojump z pip nvm sudo vvm)
 
 source $ZSH/oh-my-zsh.sh
+
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    zgen oh-my-zsh
+
+    # plugins
+    # zgen oh-my-zsh plugins/git
+    # zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen load zsh-users/zsh-syntax-highlighting
+    # zgen load /path/to/super-secret-private-plugin
+
+    # bulk load
+    zgen loadall <<EOPLUGINS
+        zsh-users/zsh-history-substring-search
+        # /path/to/local/plugin
+EOPLUGINS
+    # ^ can't indent this EOPLUGINS
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # other plugins
+    zgen load rimraf/k
+
+    # theme
+    zgen oh-my-zsh themes/arrow
+
+    # save all to init script
+    zgen save
+fi
+
 
 # User configuration
 
@@ -75,14 +112,14 @@ export PATH="/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # nvm
-export NVM_NODEJS_ORG_MIRROR=http://dist.u.qiniudn.com
-source ~/workspace/repositories/nvm/nvm.sh
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+source "${HOME}/.nvm/nvm.sh"
 
 # fzf
-source ~/.fzf.zsh
+source "${HOME}/.fzf.zsh"
 
 # Added for autojump
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # Added for tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
@@ -107,9 +144,8 @@ alias cnpm="npm --registry=http://r.cnpmjs.org \
   --disturl=http://dist.cnpmjs.org \
   --userconfig=$HOME/.cnpmrc"
 
-# alias for koa to generator
-alias node='node --harmony'
 alias vim=gvim
+alias pip='pip --trusted-host mirrors.aliyun.com'
 
 # let iTerm 2 display chinese charactors currectly.
 # see: http://hi.baidu.com/hawkspace/item/e07c6528335a34c7dcf69a40

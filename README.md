@@ -44,7 +44,7 @@ Include:
 	# replace the gem sources
 	gem sources -r https://rubygems.org/
 	
-	gem sources -a http://ruby.taobao.org/
+	gem sources -a https://ruby.taobao.org/
 	
 	# gem sources -l 用来查看source list
 	```
@@ -90,6 +90,11 @@ Include:
     ```
     sudo apt-get install autojump
     ```
+  * Install `zgen` - see [zgen](https://github.com/tarjoilija/zgen)
+  
+    ```
+    git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+    ```
 
 ## Python
 
@@ -110,7 +115,7 @@ Include:
     ```
     [global]
 
-    index-url = http://pypi.douban.com/simple
+    index-url = http://mirrors.aliyun.com/pypi/simple/
     ```
 
   * Install `virtualenvwrapper`. See [virtualenvwrapper](https://bitbucket.org/dhellmann/virtualenvwrapper/overview) on Bitbucket.
