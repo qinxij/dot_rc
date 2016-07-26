@@ -1,0 +1,95 @@
+body {
+  /*background-color: rgb(40,44,52);
+  color: #ddd;*/
+}
+
+h2, h3 {
+  font-family: "Source Serif Pro";
+}
+
+.navbar {
+  margin: 0;
+}
+
+.jumbotron {
+  /*background-color: rgba(51,92,123,.9);*/
+  background-color: rgb(40,44,52);
+  margin: 0;
+}
+
+.jumbotron h1, .jumbotron h3 {
+  color: #eee;
+  text-align: center;
+  font-family: "Ralewary";
+  font-weight: 300;
+}
+.jumbotron h1 {
+  font-weight: normal;
+}
+
+
+.carousel {
+  margin-top: 30px;
+}
+
+.carousel img {
+  max-height: 560px;
+  margin: 0px auto;
+}
+.carousel-caption {
+}
+
+.features {
+  padding: 40px 0 60px 0;
+  background-color: #eee;
+  color: black;
+  margin: 0;
+
+  line-height: 1.8em;
+}
+
+.videos {
+  padding: 40px 0 60px 0;
+  /*background-color: rgba(51,92,123,.9);*/
+  background-color: rgb(40,44,52);
+  color: #eee;
+}
+.videoWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.video {
+  max-height: 560px;
+}
+
+.download {
+  padding: 40px 0 60px 0;
+  background-color: #eee;
+  color: black;
+  margin: 0;
+}
+.buttons {
+  text-align: center;
+  padding: 50px 0;
+}
+.btn-download {
+  background: url(/images/download.png) no-repeat;
+  display: inline-block;
+  height: 75px;
+  width: 252px;
+  margin: 0 auto;
+  color: rgba(0,0,0,0);
+}
+.btn-download:hover {
+  color: rgba(0,0,0,0);
+}
+.btn-download:visited {
+  color: rgba(0,0,0,0);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+}
