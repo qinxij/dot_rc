@@ -11,6 +11,13 @@ h2, h3 {
   margin: 0;
 }
 
+.logo {
+  position: relative;
+  top: -10px;
+  width: 42px;
+  height: 42px;
+}
+
 .jumbotron {
   /*background-color: rgba(51,92,123,.9);*/
   background-color: rgb(40,44,52);
