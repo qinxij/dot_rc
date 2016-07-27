@@ -1,0 +1,40 @@
+/* http://www.iconfont.cn/webfont/#!/webfont/index */
+@font-face {
+  font-family: 'Siyuanheiti';
+  src: url('/fonts/siyuanheiti-regular/webfont.eot'); /* IE9*/
+  src: url('/fonts/siyuanheiti-regular/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/siyuanheiti-regular/webfont.woff') format('woff'), /* chrome、firefox */
+  url('/fonts/siyuanheiti-regular/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/fonts/siyuanheiti-regular/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Siyuanheiti';
+  src: url('/fonts/siyuanheiti-900/webfont.eot'); /* IE9*/
+  src: url('/fonts/siyuanheiti-900/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/siyuanheiti-900/webfont.woff') format('woff'), /* chrome、firefox */
+  url('/fonts/siyuanheiti-900/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/fonts/siyuanheiti-900/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Siyuanheiti';
+  src: url('/fonts/siyuanheiti-bold/webfont.eot'); /* IE9*/
+  src: url('/fonts/siyuanheiti-bold/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/siyuanheiti-bold/webfont.woff') format('woff'), /* chrome、firefox */
+  url('/fonts/siyuanheiti-bold/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/fonts/siyuanheiti-bold/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Siyuanheiti';
+  src: url('/fonts/siyuanheiti-300/webfont.eot'); /* IE9*/
+  src: url('/fonts/siyuanheiti-300/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/siyuanheiti-300/webfont.woff') format('woff'), /* chrome、firefox */
+  url('/fonts/siyuanheiti-300/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/fonts/siyuanheiti-300/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+  font-weight: 300;
+}

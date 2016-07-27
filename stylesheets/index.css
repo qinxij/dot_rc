@@ -1,10 +1,13 @@
 body {
   /*background-color: rgb(40,44,52);
   color: #ddd;*/
+  font-family: "Siyuanheiti, "Helvetica Nenu", Helvetica, Arial, sans-serif";
+  font-weight: 300;
 }
 
 h2, h3 {
-  font-family: "Source Serif Pro";
+  font-family: 'Source Serif Pro', Siyuanheiti, serif;
+  font-weight: bold;
 }
 
 .navbar {
@@ -24,14 +27,20 @@ h2, h3 {
   margin: 0;
 }
 
-.jumbotron h1, .jumbotron h3 {
+.jumbotron h1, .jumbotron .sub-title {
   color: #eee;
   text-align: center;
-  font-family: "Ralewary";
+  font-family: "Raleway";
   font-weight: 300;
 }
 .jumbotron h1 {
   font-weight: normal;
+  font-variant: small-caps;
+}
+.jumbotron .sub-title {
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  font-weight: 300;
 }
 
 
