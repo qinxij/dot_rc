@@ -18,10 +18,10 @@
   <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-offset="1" data-target="#navigation">
 
   <!-- navigation bar -->
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -37,10 +37,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">FEATURES</a></li>
-          <li><a href="#">VIDEOS</a></li>
-          <li><a href="#">DOWNLOAD</a></li>
+          <li class="active"><a href="#home" class="smoothscroll">HOME <span class="sr-only">(current)</span></a></li>
+          <li><a href="#features" class="smoothscroll">FEATURES</a></li>
+          <li><a href="#videos" class="smoothscroll">VIDEOS</a></li>
+          <li><a href="#download" class="smoothscroll">DOWNLOAD</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -48,7 +48,7 @@
 
 
   <!-- Home -->
-  <div class="jumbotron home">
+  <div class="jumbotron home" id="home">
     <h1>GHstars</h1>
     <h3>Manage Your GitHub starred repositories with groups and tags.</h3>
 
@@ -110,99 +110,134 @@
   </div>
 
   <!-- Features -->
-  <div class="container-fluid features">
-  <div class="container">
-    <h2>Features</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>View Starred Repositories</h3>
-        <p>You can view all your starred repositories on GitHub very easy with GHstars. The app fetch and update your starred automatically. </p>
-        <p>GHstars has a readme viewer for selected repository. With the navigation in the viewer, you can easily to jump any position of the readme page.</p>
+  <div class="container-fluid features" id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>View Starred Repositories</h3>
+          <p>You can view all your starred repositories on GitHub very easy with GHstars. The app fetch and update your starred automatically. </p>
+          <p>GHstars has a readme viewer for selected repository. With the navigation in the viewer, you can easily to jump any position of the readme page.</p>
         </div>
-      <div class="col-md-4">
-        <h3>Organize with Group/Tag</h3>
-        <p>Oranizing the starred repositories with groups and tags, your mind will be resolved to guess what the repository is about. With a good organization,
-        you can find a specific repository more quickly.</p>
-        <p>GHstars has a very simple and convenient way to edit the groups and tags.</p>
+        <div class="col-md-4">
+          <h3>Organize with Group/Tag</h3>
+          <p>Oranizing the starred repositories with groups and tags, your mind will be resolved to guess what the repository is about. With a good organization,
+            you can find a specific repository more quickly.</p>
+            <p>GHstars has a very simple and convenient way to edit the groups and tags.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Fuzzy Search</h3>
+            <p>GHstars has succinct searchbar witch will flowed on the window just after your slight click on a specific key.</p>
+            <p>As a clever app, GHstars do not need you to type a full-matched name of a repository, it do fuzzy search by name or by name and description. </p>
+
+          </div>
         </div>
-      <div class="col-md-4">
-        <h3>Fuzzy Search</h3>
-        <p>GHstars has succinct searchbar witch will flowed on the window just after your slight click on a specific key.</p>
-        <p>As a clever app, GHstars do not need you to type a full-matched name of a repository, it do fuzzy search by name or by name and description. </p>
 
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Synchronize multiple devices</h3>
-        <p>You may expect to use GHstars on multiple devices to manage your starred. GHstars provide a way to synchronize the groiups and tags between multiple devices.</p>
-        <p>To use this feature, you just need to setup a webdav service.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Synchronize multiple devices</h3>
+            <p>You may expect to use GHstars on multiple devices to manage your starred. GHstars provide a way to synchronize the groiups and tags between multiple devices.</p>
+            <p>To use this feature, you just need to setup a webdav service.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Vim-Style Shortcuts</h3>
+            <p>Inspired by Vim and Spacemacs, GHstars provide a keyboard shortcut system to drive it's functions. </p>
+            <p>So now you can orgnize your starred repositories without move your fingers out of your favorite keyboard.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Color Themes</h3>
+            <p>A light theme for day, a dark theme for night. </p>
+            <p>Maybe you want use the dark theme all the time. </p>
+            <p>But, I always use the light theme.</p>
+            <p>Do not ask me why make two themes, I will say my brother request me do.</p>
+          </div>
         </div>
-      <div class="col-md-4">
-        <h3>Vim-Style Shortcuts</h3>
-        <p>Inspired by Vim and Spacemacs, GHstars provide a keyboard shortcut system to drive it's functions. </p>
-        <p>So now you can orgnize your starred repositories without move your fingers out of your favorite keyboard.</p>
+      </div>
+    </div>
+
+    <!-- Videos -->
+
+    <div class="container-fluid videos" id="videos">
+      <div class="container">
+        <h2>Videos</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <span class="videoWrap">
+              <video class="video" controls="true" src="./GHstarsFeatures1.mp4" height="560"></div>
+              </span>
+            </div>
+          </div>
         </div>
-      <div class="col-md-4">
-        <h3>Color Themes</h3>
-        <p>A light theme for day, a dark theme for night. </p>
-        <p>Maybe you want use the dark theme all the time. </p>
-        <p>But, I always use the light theme.</p>
-        <p>Do not ask me why make two themes, I will say my brother request me do.</p>
       </div>
-    </div>
-  </div>
-</div>
 
-  <!-- Videos -->
 
-<div class="container-fluid videos">
-  <div class="container">
-    <h2>Videos</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <span class="videoWrap">
-        <video class="video" controls="true" src="./GHstarsFeatures1.mp4" height="560"></div>
-        </span>
+      <!-- Download -->
+
+      <div class="container-fluid download" id="download">
+        <div class="container">
+          <div class="row">
+            <h2>Download</h2>
+            <div class="co-md-12">
+              <div class="buttons">
+                <a class="btn-download" href="https://itunes.apple.com/us/app/oh-my-star/id788446112?l=en&amp;mt=12" target="_blank" class="download">Download from App Store</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-
-  <!-- Download -->
-
-<div class="container-fluid download">
-  <div class="container">
-    <div class="row">
-    <h2>Download</h2>
-      <div class="co-md-12">
-      <div class="buttons">
-        <a class="btn-download" href="https://itunes.apple.com/us/app/oh-my-star/id788446112?l=en&amp;mt=12" target="_blank" class="download">Download from App Store</a>
+      <!-- Help -->
+      <div class="container help">
       </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-  <!-- Help -->
-  <div class="container help">
-  </div>
 
 
-  <!-- Bottom -->
-  <div class="footer">
-    <div class="row">
-      <div class="col-md-12">
-        <span class="copyright">&copy;2016 GHstars .Inc</span>
+      <!-- Bottom -->
+      <div class="footer">
+        <div class="row">
+          <div class="col-md-12">
+            <span class="copyright">&copy;2016 GHstars .Inc</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <!-- <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> -->
+      <script src="javascripts/jquery.min.js"></script>
+      <script src="javascripts/jquery.smooth-scroll.js"></script>
+      <script src="javascripts/jquery.ba-bbq.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+
+      <script>
+      $(".carousel").carousel({
+        interval: 3500
+      })
+
+      $(document).ready(function() {
+
+        $(document).on('click', 'a[class="smoothscroll"]', function() {
+          var slashedHash = '#/' + this.hash.slice(1);
+          if ( this.hash ) {
+
+            if ( slashedHash === location.hash ) {
+              $.smoothScroll({scrollTarget: this.hash});
+            } else {
+              $.bbq.pushState(slashedHash);
+            }
+
+            return false;
+          }
+        });
+
+        $(window).bind('hashchange', function(event) {
+          var tgt = location.hash.replace(/^#\/?/,'');
+          if ( document.getElementById(tgt) ) {
+            $.smoothScroll({scrollTarget: '#' + tgt});
+          }
+        });
+
+        $(window).trigger('hashchange');
+      });
+      </script>
+    </body>
+    </html>
